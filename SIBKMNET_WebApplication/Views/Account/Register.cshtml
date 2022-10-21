@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*<form asp-action="Register" method="post">
+        <input  name="Fullname" value="" />
+        <input  name="Email" value="" />
+        <input  name="Password" value="" />
+        <button type="submit">Daftar</button>
+    </form>*@
+
+
+<form asp-action="Register" method="post">
+
+    <div class="form-outline mb-4">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="FullName" required>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="Email" required>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="Password" required>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <button type="submit"
+                class="btn btn-primary" name="regis">
+            Daftar
+        </button>
+    </div>
+
+    <p class="text-center text-muted mt-5 mb-0">
+        Have already an account? <a asp-controller="Account" asp-action="Login"
+                                    class="fw-bold text-body"><u>Login here</u></a>
+    </p>
+
+</form>
